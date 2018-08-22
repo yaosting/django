@@ -1,0 +1,31 @@
+<!--page/mineorder/mineorder.wxml-->
+<view bindtap="allOrderPage" class="allOrder">
+    <text class="allOrder-left">   订单</text>
+    <text class="allOrder-right">查看全部订单</text>
+</view>
+
+
+ <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+            <view class="orders-number">订单编号：{{item.number}}</view>
+            <view class="orders-detail">
+                <image src="{{item.thumb}}"></image>
+                <view class="">{{item.name}}</view> 
+                <view class="">{{item.count}}</view>
+                <text class="orders-status">{{item.status}}</text>
+            </view>
+            <view class="orders-footer">
+                <text>实付：￥{{item.money}}</text>
+                <button size="mini" class="orders-btn" bindtap="payOrders">付款</button>
+            </view>
+</view>
+
+ <view class="orders-list" >
+            <view class="orders-number">订单编号：123</view>
+            <view class="orders-detail">
+                
+                <view class="">总金额</view>
+                <view class="">订单日期</view>
+                <text class="orders-status">查看详情</text>
+            </view>
+            
+</view>
